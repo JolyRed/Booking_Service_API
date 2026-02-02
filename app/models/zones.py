@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, DateTime, func
-from  app.database import Base
+from app.database import Base
 
 class Zone(Base):
     __tablename__ = "zones"

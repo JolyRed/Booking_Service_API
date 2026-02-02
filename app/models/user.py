@@ -10,6 +10,7 @@ class User(Base):
     fullname = Column(String, nullable=False)
     phone = Column(String)
     is_admin = Column(Boolean, default=False, nullable=False)
+    is_blocked = Column(Boolean, default=False, nullable=False)
     created_at = Column(DateTime, server_default=func.now())
 
 

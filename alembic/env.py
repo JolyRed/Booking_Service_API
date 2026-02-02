@@ -6,6 +6,10 @@ from alembic import context
 from app.config import settings
 from app.database import Base
 
+# импорт всех моделей, чтобы metadata содержал все таблицы для autogenerate
+# (если модели не импортировать, Alembic посчитает, что таблицы удалены)
+from app import models  # noqa: F401
+
 # Alembic Config object
 config = context.config
 
