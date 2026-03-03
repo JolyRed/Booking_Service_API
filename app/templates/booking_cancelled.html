@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            .header {
+                background: #dc3545;
+                color: white;
+                padding: 30px;
+                text-align: center;
+                border-radius: 10px 10px 0 0;
+            }
+            .content {
+                background: #f9f9f9;
+                padding: 30px;
+                border-radius: 0 0 10px 10px;
+            }
+            .booking-info {
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                margin: 20px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>❌ Бронирование отменено</h1>
+        </div>
+
+        <div class="content">
+            <p>Здравствуйте, <strong>{{fullname}}</strong>!</p>
+
+            <p>Ваше бронирование было отменено.</p>
+
+            <div class="booking-info">
+                <p><strong>Столик:</strong> №{{table_number}}</p>
+                <p><strong>Время:</strong> {{booking_time}}</p>
+            </div>
+
+            <p>Будем рады видеть вас снова!</p>
+
+            <p
+                style="
+                    color: #999;
+                    font-size: 12px;
+                    text-align: center;
+                    margin-top: 30px;
+                "
+            >
+                С уважением, Booking Service
+            </p>
+        </div>
+    </body>
+</html>
