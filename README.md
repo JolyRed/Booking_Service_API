@@ -14,7 +14,7 @@ REST API для управления бронированиями столико
 - 🐳 Docker Compose для быстрого старта
 - 📝 Логирование всех операций
 
-## 🏗️ Стек технологий
+## Стек технологий
 
 - **FastAPI** — асинхронный веб-фреймворк
 - **SQLAlchemy 2.x** — ORM с поддержкой Python 3.13
@@ -24,7 +24,7 @@ REST API для управления бронированиями столико
 - **pytest** + **pytest-asyncio** — тестирование
 - **Docker & Docker Compose** — контейнеризация
 
-## 🚀 Быстрый старт
+## Быстрый старт
 
 ### С Docker (рекомендуется)
 
@@ -83,9 +83,16 @@ DATABASE_URL=postgresql://user:password@localhost:5432/booking_db
 SECRET_KEY=your-secret-key-min-32-chars-abcdefgh1234567890
 REDIS_URL=redis://localhost:6379/0
 LOG_LEVEL=INFO
+
+SMTP_HOST=smtp.mail.ru
+SMTP_PORT=111
+SMTP_USER=test@example.com
+SMTP_PASSWORD=235kgrm34kmg4googf
+SMTP_FROM=test@example.com
+
 ```
 
-## ✅ Запуск тестов
+## Запуск тестов
 
 ```bash
 # Все тесты
@@ -108,7 +115,7 @@ pytest --cov=app --cov-report=html
 - ✅ Получение доступных столиков
 - ⏭️ Race condition (skipped на SQLite, проходит на Postgres в CI)
 
-## 🔒 Защита от Race Conditions
+## Защита от Race Conditions
 
 При одновременном бронировании одного столика используется **row-level locking**:
 
@@ -152,7 +159,7 @@ if not conflicting:
 | POST | `/tables/` | Создать столик |
 | GET | `/tables/available` | Доступные столики |
 
-## 📝 Логирование
+## Логирование
 
 Все операции логируются:
 ```bash
@@ -171,7 +178,7 @@ LOG_LEVEL=INFO  # DEBUG, INFO, WARNING, ERROR
 - Booking conflict for table 5: 2026-02-01 19:00:00 - 21:00:00
 ```
 
-## �� Структура проекта
+## Структура проекта
 
 ```
 booking_tables/
@@ -193,7 +200,7 @@ booking_tables/
 └── README.md            # Этот файл
 ```
 
-## 🔧 Разработка
+## Разработка
 
 ### Добавить новый endpoint
 
@@ -234,7 +241,7 @@ alembic upgrade head
 alembic downgrade -1
 ```
 
-## 🚀 Развёртывание
+## Развёртывание
 
 ### На продакшене
 
@@ -257,7 +264,7 @@ alembic downgrade -1
    LOG_LEVEL=WARNING
    ```
 
-## 🐛 Отладка
+## **Отладка
 
 ```bash
 # Логи приложения
